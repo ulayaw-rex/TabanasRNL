@@ -5,8 +5,8 @@ import MainLayout from "../layout/MainLayout";
 const Genders = () => {
   const content = (
     <>
-      <div className="row">
-        <div className="col-md-4">
+      <div className="container d-flex flex-column align-items-center mt-4">
+        <div className="row">
           <AddGenderForm />
         </div>
         <div className="col-md-8">

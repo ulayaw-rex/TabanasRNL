@@ -1,0 +1,24 @@
+.table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table td,
+.table th {
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.actions-column {
+  width: 1%;
+  white-space: nowrap;
+}
