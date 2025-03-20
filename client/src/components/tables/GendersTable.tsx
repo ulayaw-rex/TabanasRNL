@@ -1,6 +1,4 @@
-import DeleteGender from "../../pages/gender/DeleteGender";
-import EditGender from "../../pages/gender/EditGender";
-import "./GendersTable.css";
+import "../../style/GendersTable.css";
 
 const GendersTable = () => {
   return (
@@ -14,30 +12,26 @@ const GendersTable = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>Male</td>
-            <div className="d-flex gap-2">
-              <EditGender />
-              <DeleteGender />
-            </div>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Female</td>
-            <div className="d-flex gap-2">
-              <EditGender />
-              <DeleteGender />
-            </div>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Others</td>
-            <div className="d-flex gap-2">
-              <EditGender />
-              <DeleteGender />
-            </div>
-          </tr>
+          {[
+            { id: 1, gender: "Male" },
+            { id: 2, gender: "Female" },
+            { id: 3, gender: "Others" },
+          ].map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.gender}</td>
+              <td>
+                <div className="d-flex justify-content-center gap-2">
+                  <button className="btn btn-primary btn-sm">
+                    <i className="bi bi-pencil"></i>
+                  </button>
+                  <button className="btn btn-danger btn-sm">
+                    <i className="bi bi-trash"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </>

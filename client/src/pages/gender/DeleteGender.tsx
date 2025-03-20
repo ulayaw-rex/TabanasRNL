@@ -1,13 +1,17 @@
+import MainLayout from "../layout/MainLayout";
+import DeleteGenderForm from "../../components/forms/DeleteGenderForm";
+
 const DeleteGender = () => {
-  return (
+  const content = (
     <>
-      <div className="form-group">
-        <button type="submit" className="btn btn-danger">
-          <i className="bi bi-trash"></i>
-        </button>
+      <div className="d-flex justify-content-center">
+        <div className="col-md-3">
+          <DeleteGenderForm />
+        </div>
       </div>
     </>
   );
+  return <MainLayout content={content} />;
 };
 
 export default DeleteGender;
